@@ -17,6 +17,13 @@ way the brief asks for.
 
 Deterministic: the same bytes are written on every run. Offline:
 no network access, no input files, standard library only.
+
+Verified 2026-11-24T12:43Z: two runs from clean copies produce
+byte-identical output, sha256
+0ab20ecd535eeb1091cd5951e6f391abf0959029506b37e1b53154d7cccb9855,
+file mode 0644, 122 bytes, 122 code points, one line, no trailing
+newline, no BOM. A third run with the network namespace disabled
+(unshare -rn) writes the same sha256.
 """
 
 import os
